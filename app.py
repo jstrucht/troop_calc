@@ -8,7 +8,8 @@ def create_app():
     
     @app.route("/", methods =["GET", "POST"])
     def home():
-    
+        troop_mix = None
+        default_ratio = False
         if request.method == "POST":
     
             max_tier = int(request.form.get("max_tier"))
